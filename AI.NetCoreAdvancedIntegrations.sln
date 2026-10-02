@@ -5,11 +5,11 @@ VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedAI.DeepGramVoice", "AdvancedAI.DeepGramVoice\AdvancedAI.DeepGramVoice.csproj", "{35F0634A-69DD-4BCA-BA63-17368E69F94F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedAI.HuggingFaceSenimentAnalysis", "AdvancedAI.HuggingFaceSenimentAnalysis\AdvancedAI.HuggingFaceSenimentAnalysis.csproj", "{9D8B8BD3-7AEE-405A-8287-29CF49586186}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedAI.HuggingFaceSentimentAnalysis", "AdvancedAI.HuggingFaceSentimentAnalysis\AdvancedAI.HuggingFaceSentimentAnalysis.csproj", "{9D8B8BD3-7AEE-405A-8287-29CF49586186}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedAI.HuggingFaceSummarizeNovels", "AdvancedAI.HuggingFaceSummarizeNovels\AdvancedAI.HuggingFaceSummarizeNovels.csproj", "{B2D19947-D776-402A-B1D6-97B7F7E498E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedAI.HuggingFaceSeperateEntitiesWithNER", "AdvancedAI.HuggingFaceSeperateEntitiesWithNER\AdvancedAI.HuggingFaceSeperateEntitiesWithNER.csproj", "{6DAEBF24-682F-47A7-8015-E0D83A489E97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedAI.HuggingFaceSeparateEntitiesWithNER", "AdvancedAI.HuggingFaceSeparateEntitiesWithNER\AdvancedAI.HuggingFaceSeparateEntitiesWithNER.csproj", "{6DAEBF24-682F-47A7-8015-E0D83A489E97}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedAI.HuggingFaceQaWithRobertaBase", "AdvancedAI.HuggingFaceQaWithRobertaBase\AdvancedAI.HuggingFaceQaWithRobertaBase.csproj", "{B8C4A670-B758-4357-9C7E-95C43C185B5C}"
 EndProject

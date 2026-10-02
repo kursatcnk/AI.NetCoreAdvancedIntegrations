@@ -24,9 +24,9 @@ Tüm çağrılar `HttpClient` ile doğrudan REST üzerinden yapılıyor, SDK kul
 
 **Hugging Face Inference API**
 
-- `AdvancedAI.HuggingFaceSenimentAnalysis`: Türkçe metinde duygu analizi (`savasy/bert-base-turkish-sentiment-cased`).
+- `AdvancedAI.HuggingFaceSentimentAnalysis`: Türkçe metinde duygu analizi (`savasy/bert-base-turkish-sentiment-cased`).
 - `AdvancedAI.HuggingFaceDetectToxicBehaviour`: zararlı / toksik içerik tespiti (`unitary/toxic-bert`).
-- `AdvancedAI.HuggingFaceSeperateEntitiesWithNER`: metindeki kişi, kurum ve yer adlarını ayırma (`dslim/bert-base-NER`).
+- `AdvancedAI.HuggingFaceSeparateEntitiesWithNER`: metindeki kişi, kurum ve yer adlarını ayırma (`dslim/bert-base-NER`).
 - `AdvancedAI.HuggingFaceQaWithRobertaBase`: verilen metne göre soru cevaplama (`deepset/roberta-base-squad2`).
 - `AdvancedAI.HuggingFaceSummarizeNovels`: uzun metni özetleme (`facebook/bart-large-cnn`).
 
