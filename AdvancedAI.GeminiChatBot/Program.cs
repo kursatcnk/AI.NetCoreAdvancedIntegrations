@@ -6,8 +6,8 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        // Google Gemini API için kendi API anahtarımı buraya ekliyorum
-        string apiKey = "";
+        // Google Gemini API anahtarını ortam değişkeninden alıyorum
+        string apiKey = ApiKeys.Require("GEMINI_API_KEY");
         string model = "gemini-1.5-pro";
         string endpoint = $"https://generativelanguage.googleapis.com/v1/models/{model}:generateContent?key={apiKey}";
 

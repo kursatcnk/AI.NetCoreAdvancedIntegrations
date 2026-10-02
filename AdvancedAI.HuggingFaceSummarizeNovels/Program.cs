@@ -16,8 +16,8 @@ class Program
         Console.WriteLine("Özetlemek istediğiniz metni giriniz:");
         string inputText = Console.ReadLine();
 
-        // Hugging Face API anahtarımı buraya giriyorum
-        string apiKey = ""; // Hugging Face API anahtarınızı buraya ekle
+        // Hugging Face token'ını ortam değişkeninden alıyorum
+        string apiKey = ApiKeys.Require("HF_TOKEN");
         // Kullanacağım özetleme modelinin URL'si
         string modelUrl = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn";
 

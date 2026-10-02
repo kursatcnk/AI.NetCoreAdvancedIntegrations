@@ -5,9 +5,9 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        // API abonelik anahtarımı ve bölgeyi ayarlıyorum
-        string subscriptionKey = "";
-        string region = "westeurope";
+        // Anahtar ortam değişkeninden, bölge tanımlı değilse westeurope
+        string subscriptionKey = ApiKeys.Require("AZURE_SPEECH_KEY");
+        string region = ApiKeys.Optional("AZURE_SPEECH_REGION", "westeurope");
 
         // Token alacağım endpoint'i hazırlıyorum
         string tokenEndPoint = $"https://{region}.api.cognitive.microsoft.com/sts/v1.0/issuetoken";

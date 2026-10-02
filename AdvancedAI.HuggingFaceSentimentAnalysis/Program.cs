@@ -3,8 +3,8 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 
-// Hugging Face API keyimi buraya koydum. Bilerek keyi girmedim. Siz kendi keyinizi kullanmalısınız.
-var apiKey = "";
+// Hugging Face token'ı ortam değişkeninden geliyor; herkes kendi token'ını kullanıyor.
+var apiKey = ApiKeys.Require("HF_TOKEN");
 
 // Kullanıcıdan metin alıyorum
 Console.Write("Analiz etmek istediğin metni gir: ");

@@ -52,7 +52,32 @@ cd AI.NetCoreAdvancedIntegrations
 dotnet run --project AdvancedAI.GeminiChatBot
 ```
 
-Anahtarlar depoda yok. Çalıştıracağın projenin `Program.cs` dosyasındaki `apiKey` / `subscriptionKey` alanını kendi anahtarınla doldur; bu değişikliği commit'leme.
+Kodda anahtar yok; her proje ihtiyaç duyduğu anahtarı ortam değişkeninden okur. Değişken tanımlı değilse hangi değişkenin eksik olduğunu yazıp çıkar, anahtarın değerini hiçbir yere yazdırmaz.
+
+| Sağlayıcı | Ortam değişkeni | Kullanan projeler |
+|---|---|---|
+| Anthropic Claude | `ANTHROPIC_API_KEY` | ClaudeChatBot, SummarizePDFWithClaude, SendJobApplicationMailWithClaude |
+| Google Gemini | `GEMINI_API_KEY` | GeminiChatBot, GeminiAutoPromptChain, GeminiRoleBasedSimulation |
+| OpenAI | `OPENAI_API_KEY` | CodeAssistantWithOpenAI |
+| Hugging Face | `HF_TOKEN` | HuggingFace* projeleri |
+| Azure AI Vision | `AZURE_VISION_KEY`, `AZURE_VISION_ENDPOINT` | AnalyzeImageWithAzure, DetailedImageDetectionWithAzure |
+| Azure AI Speech | `AZURE_SPEECH_KEY`, isteğe bağlı `AZURE_SPEECH_REGION` (varsayılan `westeurope`) | TTSWithAzure |
+| Stability AI | `STABILITY_API_KEY` | TextToImageWithStabilityAI |
+| Replicate | `REPLICATE_API_TOKEN` | CreateImageWithReplicate |
+| Deepgram | `DEEPGRAM_API_KEY` | DeepGramVoice |
+
+PowerShell'de yalnızca açık oturum için:
+
+```powershell
+$env:GEMINI_API_KEY = "..."
+dotnet run --project AdvancedAI.GeminiChatBot
+```
+
+Kalıcı olarak tanımlamak için `setx GEMINI_API_KEY "..."` (yeni açılan terminallerde geçerli olur).
+
+Azure görsel analiz projelerinde analiz edilecek dosyanın yolu `Program.cs` içindeki `imagePath` alanında, Deepgram projesinde ses dosyası `force.mp3` olarak bekleniyor.
+
+Anahtarların okunduğu ortak sınıf `Shared/ApiKeys.cs`; `Directory.Build.props` onu her projeye link olarak ekliyor, projeler birbirine referans vermiyor.
 
 ## Lisans
 

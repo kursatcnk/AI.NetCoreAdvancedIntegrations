@@ -1,0 +1,6 @@
+<Project>
+  <!-- Ortak ApiKeys yardımcı sınıfı tüm projelere link olarak ekleniyor, ayrı bir proje referansı gerekmiyor. -->
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Shared\ApiKeys.cs" Link="Shared\ApiKeys.cs" />
+  </ItemGroup>
+</Project>

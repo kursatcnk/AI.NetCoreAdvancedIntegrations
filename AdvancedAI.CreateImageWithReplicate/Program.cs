@@ -10,8 +10,8 @@ class Program
         Console.Write("Görsel oluşturmak için bir açıklama giriyorum: ");
         string prompt = Console.ReadLine();
 
-        //  API tokenımı giriyorum
-        string apiToken = ""; // Buraya kendi Replicate API tokenımı ekliyorum
+        // Replicate API token'ını ortam değişkeninden alıyorum
+        string apiToken = ApiKeys.Require("REPLICATE_API_TOKEN");
         string apiUrl = "https://api.replicate.com/v1/predictions";
 
         //  API'ye göndereceğim veriyi hazırlıyorum

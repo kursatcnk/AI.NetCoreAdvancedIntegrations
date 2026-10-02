@@ -6,8 +6,8 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        // Hugging Face API anahtarımı burada tanımlıyorum
-        var apiKey = "";
+        // Hugging Face token'ını ortam değişkeninden alıyorum
+        var apiKey = ApiKeys.Require("HF_TOKEN");
 
         // Kullanıcıdan analiz etmek istediğim yorumu alıyorum
         Console.Write("Analiz edilecek yorumu giriniz: ");

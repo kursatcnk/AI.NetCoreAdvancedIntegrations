@@ -7,8 +7,8 @@ class Program
     {
         // Aanaliz etmek istediğim görselin yolunu belirliyorum
         string imagePath = ""; // Görsel dosya yolu buraya gelecek
-        string subscriptionKey = ""; // Azure Vision API abonelik anahtarım buraya gelecek
-        string endpoint = ""; // Endpoint adresim
+        string subscriptionKey = ApiKeys.Require("AZURE_VISION_KEY");
+        string endpoint = ApiKeys.Require("AZURE_VISION_ENDPOINT").TrimEnd('/');
 
         string apiUrl = $"{endpoint}/vision/v3.2/analyze";
         string requestParameters = "visualFeatures=Categories,Description,Tags,Color&language=en";

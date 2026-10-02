@@ -7,10 +7,9 @@ class Program
     {
         // Analiz etmek istediğim görselin yolunu belirtiyorum
         string imagePath = "";
-        // Azure Computer Vision endpoint adresimi buraya yazıyorum
-        string endpoint = "";
-        // Azure abonelik anahtarımı buraya ekliyorum
-        string subscriptionKey = "";
+        // Azure Computer Vision endpoint adresi ve anahtarı ortam değişkenlerinden geliyor
+        string endpoint = ApiKeys.Require("AZURE_VISION_ENDPOINT").TrimEnd('/');
+        string subscriptionKey = ApiKeys.Require("AZURE_VISION_KEY");
 
         // API isteği için URL ve parametreleri hazırlıyorum
         string apiUrl = $"{endpoint}/vision/v3.2/analyze";

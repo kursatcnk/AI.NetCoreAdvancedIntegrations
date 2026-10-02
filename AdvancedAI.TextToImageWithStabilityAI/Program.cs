@@ -14,7 +14,7 @@ class Program
         string prompt = Console.ReadLine();
 
         // API bilgilerini ayarlıyorum
-        string apiKey = ""; // Buraya kendi Stability AI API anahtarınızı ekleyin
+        string apiKey = ApiKeys.Require("STABILITY_API_KEY");
         string engineId = "stable-diffusion-v1-6";
         string apiUrl = $"https://api.stability.ai/v1/generation/{engineId}/text-to-image";
 

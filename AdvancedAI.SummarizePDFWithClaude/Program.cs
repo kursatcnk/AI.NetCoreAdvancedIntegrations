@@ -10,8 +10,8 @@ class Program
         // Kendi bilgisayarımdaki PDF dosyasının yolunu buraya yazıyorum
         string pdfPath = "BURAYA_PDF_YOLUNU_YAZ";
 
-        // Anthropic Claude API anahtarımı buraya yazıyorum
-        string apiKey = "BURAYA_API_KEYINIZI_YAZIN";
+        // Anthropic Claude API anahtarını ortam değişkeninden alıyorum
+        string apiKey = ApiKeys.Require("ANTHROPIC_API_KEY");
 
         // Eğer PDF dosyası yoksa programı bitiriyorum
         if (!File.Exists(pdfPath))

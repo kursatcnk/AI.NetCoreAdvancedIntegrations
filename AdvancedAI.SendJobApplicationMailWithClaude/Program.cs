@@ -7,8 +7,8 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        // Anthropic Claude API anahtarımı burada saklıyorum
-        string apiKey = "BURAYA_OWN_API_KEY";
+        // Anthropic Claude API anahtarını ortam değişkeninden alıyorum
+        string apiKey = ApiKeys.Require("ANTHROPIC_API_KEY");
 
         // Prompt mühendisliği ile hazırlanmış istek:
         // Claude’a rol veriyorum, bağlam sunuyorum ve çıktının formatını belirtiyorum.

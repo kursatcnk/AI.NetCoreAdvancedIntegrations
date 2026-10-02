@@ -10,8 +10,8 @@ class Program
 
     static async Task Main(string[] args)
     {
-        // Api key burada bilerek kendi keyimi girmiyorum, siz kendi keyinizi buraya girin.
-        string apiKey = ""; 
+        // Hugging Face token'ı ortam değişkeninden geliyor (HF_TOKEN).
+        string apiKey = ApiKeys.Require("HF_TOKEN");
 
         // Kullanıcıdan analiz edilecek metni alıyorum
         Console.Write("NER Analizi Yapılacak Metni Giriniz: ");

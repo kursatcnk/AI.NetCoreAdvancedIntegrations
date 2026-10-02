@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 
-// Burada kendi Deepgram API anahtarımı tanımlıyorum. Bilerek boş bıraktım ki anahtarımı paylaşmayayım.
-var apiKey = "";
+// Deepgram API anahtarını ortam değişkeninden alıyorum, kodda anahtar tutmuyorum.
+var apiKey = ApiKeys.Require("DEEPGRAM_API_KEY");
 
 // Çevirmek istediğim ses dosyasının yolunu burada belirtiyorum.
 var filePath = "force.mp3";

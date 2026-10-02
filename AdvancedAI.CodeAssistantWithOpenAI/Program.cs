@@ -43,7 +43,7 @@ class Program
 
     static async Task<string> AskOpenAI(string prompt)
     {
-        const string apiKey = "";
+        string apiKey = ApiKeys.Require("OPENAI_API_KEY");
         const string endpoint = "https://api.openai.com/v1/chat/completions";
 
         using var client = new HttpClient();

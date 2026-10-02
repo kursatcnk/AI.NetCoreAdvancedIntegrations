@@ -6,8 +6,8 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        // Anthropic API anahtarımı buraya yazıyorum
-        string apiKey = "";
+        // Anthropic API anahtarını ortam değişkeninden alıyorum
+        string apiKey = ApiKeys.Require("ANTHROPIC_API_KEY");
 
         // Kullanıcıdan soru alıyorum
         Console.Write("Sorunuzu Giriniz: ");
